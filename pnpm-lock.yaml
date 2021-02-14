@@ -20,7 +20,7 @@ packages:
   /is-docker/2.1.1:
     dev: true
     engines:
-      node: '>=8'
+      node: ">=8"
     hasBin: true
     resolution:
       integrity: sha512-ZOoqiXfEwtGknTiuDEy8pN2CfE3TxMHprvNer1mXiqwkOT77Rw3YVrUQ52EqAOU3QAWDQ+bQdx7HJzrv7LS2Hw==
@@ -29,7 +29,7 @@ packages:
       is-docker: 2.1.1
     dev: true
     engines:
-      node: '>=8'
+      node: ">=8"
     resolution:
       integrity: sha512-fKzAra0rGJUUBwGBgNkHZuToZcn+TtXHpeCgmkMJMMYx1sQDYaCSyjJBSCa2nH1DGm7s3n1oBnohoVTBaN7Lww==
   /open/7.4.0:
@@ -38,13 +38,13 @@ packages:
       is-wsl: 2.2.0
     dev: true
     engines:
-      node: '>=8'
+      node: ">=8"
     resolution:
       integrity: sha512-PGoBCX/lclIWlpS/R2PQuIR4NJoXh6X5AwVzE7WXnWRGvHg7+4TBCgsujUgiPpm0K1y4qvQeWnCWVTpTKZBtvA==
   /rollup/2.39.0:
     dev: true
     engines:
-      node: '>=10.0.0'
+      node: ">=10.0.0"
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
@@ -57,7 +57,7 @@ packages:
       rollup: 2.39.0
     dev: true
     engines:
-      node: '>=10.19.0'
+      node: ">=10.19.0"
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
