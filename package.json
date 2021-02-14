@@ -1,0 +1,11 @@
+{
+	"name": "todo-project",
+	"main": "source/index.html",
+	"scripts": {
+		"build": "snowpack build",
+		"start": "snowpack dev --open none"
+	},
+	"devDependencies": {
+		"snowpack": "^3.0.11"
+	}
+}
