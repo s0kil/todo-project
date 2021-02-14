@@ -17,9 +17,7 @@ export function dispatchAction(actionType, actionData = {}) {
 
   switch (actionType) {
     case Action.ShowProjects:
-      ;(function () {
-        renderView([newProject(), ...showProjects(projects)])
-      })()
+      renderView([newProject(), ...showProjects(projects)])
       break
 
     case Action.CreateProject:
