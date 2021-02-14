@@ -1,6 +1,6 @@
 import { Project, State, Todo } from "./model"
 import { newProject, showProjects } from "./view"
-import { $, renderView } from "./utilities/action"
+import { renderView, form } from "./utilities/action"
 
 export const Action = {
   ShowProjects: "ShowProjects",
@@ -24,9 +24,8 @@ export function dispatchAction(actionType, actionData = {}) {
 
     case Action.CreateProject:
       ;(function () {
-        const form = $("form#new-project")
-        const formData = new FormData(form)
-        const project = new Project({ name: formData.get("name") })
+        const formData = form("form#new-project", ["name"])
+        const project = new Project(formData)
         projects.unshift(project)
       })()
       break
@@ -34,13 +33,11 @@ export function dispatchAction(actionType, actionData = {}) {
     case Action.CreateTodo:
       ;(function () {
         const { projectId } = actionData
-
-        const form = $(`form.new-todo[data-project-id="${projectId}"]`)
-        const formData = new FormData(form)
-        const todo = new Todo({
-          name: formData.get("name"),
-          priority: formData.get("priority"),
-        })
+        const formData = form(`form.new-todo[data-project-id="${projectId}"]`, [
+          "name",
+          "priority",
+        ])
+        const todo = new Todo(formData)
         const project = projects.find((project) => project.id === projectId)
         project.todos.push(todo)
       })()

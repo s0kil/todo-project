@@ -15,3 +15,11 @@ export function renderView(htmlElements) {
     document.body.append(htmlElements)
   }
 }
+
+export function form(formSelector, fields = []) {
+  const formData = new FormData($(formSelector))
+  return fields.reduce((object, field) => {
+    object[field] = formData.get(field)
+    return object
+  }, {})
+}
