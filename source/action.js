@@ -1,10 +1,9 @@
-import { Project, State, Todo, TodoPriority } from "./model"
+import { Project, State, Todo } from "./model"
 import { newProject, showProjects } from "./view"
 import { $, renderView } from "./utilities/action"
 
 export const Action = {
 	ShowProjects: "ShowProjects",
-	NewProject: "NewProject",
 	CreateProject: "CreateProject",
 	CreateTodo: "CreateTodo",
 }
@@ -20,12 +19,6 @@ export function dispatchAction(actionType, actionData = {}) {
 		case Action.ShowProjects:
 			;(function () {
 				renderView([newProject(), ...showProjects(projects)])
-			})()
-			break
-
-		case Action.NewProject:
-			;(function () {
-				renderView(newProject())
 			})()
 			break
 
