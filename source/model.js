@@ -1,3 +1,5 @@
+import { _ } from "./aid"
+
 export function Project({ name, todos }) {
   this.id = Date.now()
   this.name = name

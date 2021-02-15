@@ -1,4 +1,4 @@
-import { _ } from "../aid"
+import { _, $ } from "../aid"
 
 export function renderView(htmlElements) {
   _.body.innerHTML = null
