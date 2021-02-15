@@ -19,3 +19,15 @@ JavaScript                       7             34              8            178
 SUM:                             7             34              8            178
 -------------------------------------------------------------------------------
 ```
+
+## Rules
+
+- Cannot use external libraries, only snowpack, or another bundler for development.
+- The model should be:
+
+```javascript
+const projects = [
+  {name: "project 1", todos: [{name: "todo 1", priority: "low" | "medium" | "high", status: "todo" | "complete" | "inprogress"}]},
+  {name: "project 2", todos: [{name: "todo 2", priority: "low" | "medium" | "high", status: "todo" | "complete" | "inprogress"}]},
+]
+```
