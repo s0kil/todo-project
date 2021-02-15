@@ -5,5 +5,5 @@ export function $(selector) {
 }
 
 const _ = document
-_.on = document.addEventListener
+_.on = _.addEventListener
 export { _ }

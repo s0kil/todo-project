@@ -54,6 +54,6 @@ export function showTodos(todos) {
   return h("ol")()([...todos.map((todo) => showTodo(todo))])
 }
 
-export function showTodo({ name, priority, status }) {
+export function showTodo({ name }) {
   return h("li")()([name])
 }
