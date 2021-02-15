@@ -1,3 +1,4 @@
+import { _ } from "./aid"
 import { Project, State, Todo } from "./model"
 import { newProject, showProjects } from "./view"
 import { renderView, form } from "./utilities/action"
@@ -8,7 +9,7 @@ export const Action = {
   CreateTodo: "CreateTodo",
 }
 
-document.addEventListener("stateChange", () => {
+_.on("stateChange", () => {
   dispatchAction(Action.ShowProjects)
 })
 

@@ -1,18 +1,16 @@
-export function $(selector) {
-  return document.querySelector(selector)
-}
+import { _ } from "../aid"
 
 export function renderView(htmlElements) {
-  document.body.innerHTML = null
+  _.body.innerHTML = null
 
   if (htmlElements instanceof Array) {
     // Render Array Of Elements
-    const fragment = document.createDocumentFragment()
+    const fragment = _.createDocumentFragment()
     htmlElements.forEach((htmlElement) => fragment.append(htmlElement))
-    document.body.append(fragment)
+    _.body.append(fragment)
   } else {
     // Render An Element
-    document.body.append(htmlElements)
+    _.body.append(htmlElements)
   }
 }
 

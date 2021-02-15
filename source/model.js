@@ -44,8 +44,8 @@ const stateReactor = {
     // Any time `State` is mutated, save it to localStorage
     localStorage.setItem("state", JSON.stringify(State))
 
-    // Also dispatch event stating that State has changed
-    document.dispatchEvent(stateChangedEvent)
+    // Dispatch event stating that State has changed
+    _.dispatchEvent(stateChangedEvent)
 
     // Success
     return true
